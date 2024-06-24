@@ -16,7 +16,7 @@ classifiers = [
 name = "nomad-pymodaq"
 description = "Nomad plugin for PyMoDAQ"
 version = "0.1.0"
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.9"
 authors = [
     { name = "Sebastien Weber", email = "sebastien.weber@cemes.fr" },
@@ -25,7 +25,7 @@ maintainers = [
     { name = "Sebastien Weber", email = "sebastien.weber@cemes.fr" },
 ]
 license = { file = "LICENSE" }
-dependencies = ["nomad-lab>=1.2.2dev578"]
+dependencies = ["nomad-lab>=1.3.0"]
 
 [project.urls]
 Repository = "https://github.com/seb5g/nomad-pymodaq"
@@ -112,3 +112,6 @@ myparser = "nomad_pymodaq.parsers:myparser"
 mypackage = "nomad_pymodaq.schema_packages:mypackage"
 mynormalizer = "nomad_pymodaq.normalizers:mynormalizer"
 myapp = "nomad_pymodaq.apps:myapp"
+[tool.cruft]
+# Avoid updating workflow files, this leads to permissions issues
+skip = [".github/*"]
